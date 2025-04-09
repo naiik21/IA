@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Prueba - Modelo Cardiaco</title>
+  </head>
+  <body>
+    <h1>Formulario para Predicción de Enfermedad Cardíaca</h1>
+    <form action="/predict" method="POST">
+      <label for="age">Edad:</label>
+      <input type="number" id="age" name="age" required /><br /><br />
+
+      <label for="sex">Sexo:</label>
+      <select id="sex" name="sex" required>
+        <option value="1">Hombre</option>
+        <option value="0">Mujer</option></select
+      ><br /><br />
+
+      <label for="cp">Tipo de dolor en el pecho (0-3):</label>
+      <input
+        type="number"
+        id="cp"
+        name="cp"
+        min="0"
+        max="3"
+        required /><br /><br />
+
+      <label for="trestbps">Presión arterial en reposo:</label>
+      <input type="number" id="trestbps" name="trestbps" required /><br /><br />
+
+      <label for="chol">Colesterol:</label>
+      <input type="number" id="chol" name="chol" required /><br /><br />
+
+      <label for="fbs">Glucemia en ayunas (1 = Sí, 0 = No):</label>
+      <select id="fbs" name="fbs" required>
+        <option value="1">Sí</option>
+        <option value="0">No</option></select
+      ><br /><br />
+
+      <label for="restecg">Resultados del electrocardiograma (0-2):</label>
+      <input
+        type="number"
+        id="restecg"
+        name="restecg"
+        min="0"
+        max="2"
+        required /><br /><br />
+
+      <label for="thalach">Frecuencia cardíaca máxima:</label>
+      <input type="number" id="thalach" name="thalach" required /><br /><br />
+
+      <label for="exang">Angina inducida por ejercicio (1 = Sí, 0 = No):</label>
+      <select id="exang" name="exang" required>
+        <option value="1">Sí</option>
+        <option value="0">No</option></select
+      ><br /><br />
+
+      <label for="oldpeak">Depresión del ST:</label>
+      <input
+        type="number"
+        step="0.1"
+        id="oldpeak"
+        name="oldpeak"
+        required /><br /><br />
+
+      <label for="slope">Pendiente del ST (0-2):</label>
+      <input
+        type="number"
+        id="slope"
+        name="slope"
+        min="0"
+        max="2"
+        required /><br /><br />
+
+      <label for="ca">Número de vasos coloreados (0-3):</label>
+      <input
+        type="number"
+        id="ca"
+        name="ca"
+        min="0"
+        max="3"
+        required /><br /><br />
+
+      <label for="thal">Defecto talasémico (1-3):</label>
+      <input
+        type="number"
+        id="thal"
+        name="thal"
+        min="1"
+        max="3"
+        required /><br /><br />
+
+      <input type="submit" value="Predecir" />
+    </form>
+  </body>
+</html>

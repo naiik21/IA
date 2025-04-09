@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Predicción de Pokémon</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      h1 {
+        color: #ffcb05;
+        text-shadow: 1px 1px #2a75bb;
+      }
+      input[type='file'] {
+        margin: 10px 0;
+      }
+      button {
+        background-color: #ffcb05;
+        color: #2a75bb;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      button:hover {
+        background-color: #f5b800;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sube una foto de un Pokémon</h1>
+      <form action="/predict" method="post" enctype="multipart/form-data">
+        <label for="pokemonImage">Selecciona una imagen:</label><br />
+        <input
+          type="file"
+          id="pokemonImage"
+          name="pokemonImage"
+          accept="image/*"
+          required /><br /><br />
+        <button type="submit">Predecir Pokémon</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+[project]
+name = "mcpServer"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "discord>=2.3.2",
+    "discord-py>=2.5.2",
+    "mcp[cli]>=1.6.0",
+    "python-dotenv>=1.1.0",
+]
